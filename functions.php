@@ -124,33 +124,11 @@ function add_feat_img ( $post ) {
 
 function add_wide_feat_img ( $post, $classes = "" ) {	
 		
-	$post_thumbnail_id = get_post_thumbnail_id( $post->ID );
+	$post_thumbnail_id = get_post_thumbnail_id( $post);
 	$attachment = get_post( $post_thumbnail_id );
 	$alt = get_post_meta($post_thumbnail_id, '_wp_attachment_image_alt', true);
 	
 	$wide_banner_img = wp_get_attachment_image_src($post_thumbnail_id, 'wide-banner-img' );
-	
-/*
-	if ($classes != "") {
-	$classes = "img-responsive ".$classes;	
-	} else {
-	$classes = "img-responsive";
-	}
-	
-	$img_atts = array(
-	'class'	=> $classes
-	);
-	
-	if (!empty($alt)){
-	$img_atts['alt'] = 	trim(strip_tags( $alt ));
-	}
-	
-	if (!empty($attachment->post_title)){
-	$img_atts['title'] = 	trim(strip_tags( $attachment->post_title ));
-	}
-	
-	echo get_the_post_thumbnail($post->ID ,'wide-banner-img', $img_atts );
-*/
 	
 	echo '<div class="wide-feat-img-wrap" style="background-image: url('.$wide_banner_img[0].')"></div>';
 	

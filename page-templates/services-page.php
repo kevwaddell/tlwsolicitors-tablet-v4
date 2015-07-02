@@ -20,6 +20,17 @@ Template Name: Personal Services page template
 	$parent = get_page($post->post_parent);
 	$how_it_works_active = get_field('hiw_active');
 	
+	if ( has_post_thumbnail() ) {
+	$img_post = get_the_ID();
+	} else {
+	$img_post = $post->post_parent;
+	$parent = get_post($img_post);	
+	
+		if (!has_post_thumbnail($img_post) && $parent->post_parent != 0) {
+		$img_post = $parent->post_parent;
+		}
+	}
+	
 	//echo '<pre>';print_r($page_icon);echo '</pre>';
 	
 	if ($page_icon == 'null' || !$page_icon) {
@@ -32,7 +43,7 @@ Template Name: Personal Services page template
 	}
 	?>	
 	
-	<?php if ( has_post_thumbnail() ) { ?>
+	<?php if ( has_post_thumbnail($img_post) ) { ?>
 		<?php include (STYLESHEETPATH . '/_/inc/service-page/wide-feat-img.php'); ?>
 	<?php } ?>
 
