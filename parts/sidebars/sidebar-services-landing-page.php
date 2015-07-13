@@ -13,23 +13,23 @@ $post_ID = $post->post_parent;
 }	
 
 if ($feedback_active) {
-	$client_feedback = get_field('client_feedback');
-	$quote_txt = get_field('quote', $client_feedback);	
-	$client_name = get_field('client_name', $client_feedback);
-	$location = get_field('location', $client_feedback);	
-	
+	$feedback_id = get_field('client_feedback');	
 } else {
 	$feedback_args = array(
 	'posts_per_page'   => 1,
 	'post_type' => 'tlw_testimonial_cpt',
 	'orderby'          => 'rand',
+	'meta_key'	=> 'area',
+	'meta_value'	=> 'personal'
 	); 
 	$feedback_quote = get_posts($feedback_args); 	
 	
-	$quote_txt = get_field('quote', $feedback_quote[0]->ID);
-	$client_name = get_field('client_name', $feedback_quote[0]->ID);
-	$location = get_field('location', $feedback_quote[0]->ID);
+	$feedback_id = $feedback_quote[0]->ID;
 }
+
+$quote_txt = get_field('quote', $feedback_id);	
+$client_name = get_field('client_name', $feedback_id);
+$location = get_field('location', $feedback_id);
 
 $child_args = array(
 'sort_column' => 'menu_order',
@@ -40,16 +40,10 @@ $children = get_pages($child_args);
 ?>
 <aside class="sidebar col-xs-10 col-xs-offset-1 col-md-4 col-md-offset-0">
 	
-	<?php if (!empty($feedback_quote)) { ?>
+	<?php if ($feedback_id) { ?>
 	<div class="sb-quote">
-		<?php foreach ($feedback_quote as $quote) { 
-		$quote_txt = get_field('quote', $quote->ID);	
-		$client_name = get_field('client_name', $quote->ID);
-		$location = get_field('location', $quote->ID);		
-		?>
 		<blockquote><?php echo $quote_txt; ?></blockquote>
 		<p class="text-center"><?php echo $client_name; ?>, <?php echo $location; ?></p>
-		<?php } ?>
 	</div>
 	<?php } ?>
 		

@@ -28,12 +28,25 @@ if ($number_pos == 'sidebar') {
 $sb_visible = ' hidden-sm';	
 }	
 
-$feedback_args = array(
+if ($feedback_active) {
+	$feedback_id = get_field('client_feedback');
+} else {
+	$feedback_args = array(
 	'posts_per_page'   => 1,
 	'post_type' => 'tlw_testimonial_cpt',
 	'orderby'          => 'rand',
-); 
-$feedback_quote = get_posts($feedback_args); 
+	'meta_key'	=> 'area',
+	'meta_value'	=> 'business'
+	); 
+	$feedback_quote = get_posts($feedback_args); 	
+	
+	$feedback_id = $feedback_quote[0]->ID;
+}
+
+$quote_txt = get_field('quote', $feedback_id);
+$client_name = get_field('client_name', $feedback_id);
+$location = get_field('location', $feedback_id);
+$company = get_field('company', $feedback_id);
 
 $child_args = array(
 'sort_column' => 'menu_order',
@@ -66,6 +79,13 @@ $children = get_pages($child_args);
 			<span class="txt-lg">How it Works</span>
 			<span class="txt-sml">Click here for more information</span>
 		</a>
+	</div>
+	<?php } ?>
+	
+	<?php if ($feedback_id) { ?>
+	<div class="sb-quote">
+		<blockquote><?php echo $quote_txt; ?></blockquote>
+		<p class="text-center quote-name"><?php echo $client_name; ?><?php echo($company) ? '<br>'.$company:''; ?> - <?php echo $location; ?></p>
 	</div>
 	<?php } ?>
 	
