@@ -15,6 +15,8 @@ Template Name: Service Landing page template
 			$number_pos = "bottom";	
 			}
 			$download_active = get_field('download_active');
+			$brochure = get_field('brochure');
+			$bk_download_active = get_field('bk_download_active');
 			$form_active = get_field('form_activated');
 			$color = get_field('page_colour');
 			$page_icon = get_field('page_icon');
@@ -64,6 +66,8 @@ Template Name: Service Landing page template
 								<div class="main-txt">
 								<?php the_content(); ?>
 								</div>
+								
+								<?php include (STYLESHEETPATH . '/_/inc/service-page/booklet-download.php'); ?>
 								
 								<?php include (STYLESHEETPATH . '/_/inc/service-page/faqs.php'); ?>
 								

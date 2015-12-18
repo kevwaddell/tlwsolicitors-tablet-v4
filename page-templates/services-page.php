@@ -15,6 +15,7 @@ Template Name: Personal Services page template
 	$page_icon = get_field('page_icon');
 	$download_active = get_field('download_active');
 	$brochure = get_field('brochure');
+	$bk_download_active = get_field('bk_download_active');
 	$color = get_field('page_colour');
 	$hide_title = get_field('hide_title'); 
 	$parent = get_page($post->post_parent);
@@ -76,6 +77,8 @@ Template Name: Personal Services page template
 									<div class="main-txt">
 										<?php the_content(); ?>
 									</div>
+									
+									<?php include (STYLESHEETPATH . '/_/inc/service-page/booklet-download.php'); ?>
 									
 									<?php include (STYLESHEETPATH . '/_/inc/service-page/faqs.php'); ?>
 									
