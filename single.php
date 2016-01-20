@@ -5,6 +5,7 @@
 		<div class="content">
 
 			<?php if ( have_posts() ): while ( have_posts() ) : the_post(); 
+			$download_active = get_field('download_active');
 			$freephone_num = get_field('freephone_num', 'option');
 			$date = get_the_date('l - jS F - Y');	
 			$gallery_imgs = get_field('gallery_imgs');	
@@ -56,6 +57,8 @@
 							<div class="main-txt">
 								<?php the_content(); ?>
 							</div>
+							
+							<?php include (STYLESHEETPATH . '/_/inc/posts/download-form.php'); ?>
 							
 							<div class="post-footer hidden-md">
 								<?php include (STYLESHEETPATH . '/_/inc/posts/single-footer-bar.php'); ?>

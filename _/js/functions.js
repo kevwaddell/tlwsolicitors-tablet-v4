@@ -352,11 +352,12 @@
 	
 	//DOWNLOAD BOOKLET GUIDE BUTTON
 	
-	$('body').on(event_type,'button#booklet-download-btn', function(e){
+	$('body').on(event_type,'button#file-download-btn', function(e){
 		
 		var next = $(this).next();
 		
 		$(next).toggleClass('form-open form-closed');	
+		$('html, body').animate({scrollTop: ($("button#file-download-btn").offset().top) - 30}, 500);	
 		
 		return false;
 		
@@ -374,8 +375,8 @@
                $('html, body').animate({scrollTop: ($("#hidden-download").offset().top - 20)}, 500);	
             }
     });
-	
-	//-------------------------------
+ 
+ 
 	
 	
 	$('body').on('click', "li.with-sub-nav > a", function(){

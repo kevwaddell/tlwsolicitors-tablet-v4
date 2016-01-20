@@ -15,7 +15,7 @@ $bk_btn_title = "Download booklet";
 </div>
 <?php } ?>
 
-<button id="booklet-download-btn" class="btn btn-default btn-block icon-btn icon-btn-lg btn-col-<?php echo (!empty($color)) ? $color : 'red'; ?>">Download our guide to services booklet<i class="fa fa-arrow-circle-down fa-lg"></i></button>
+<button id="file-download-btn" class="btn btn-default btn-block icon-btn icon-btn-lg btn-col-<?php echo (!empty($color)) ? $color : 'red'; ?>">Download our guide to services booklet<i class="fa fa-arrow-circle-down fa-lg"></i></button>
 <section id="booklet-download" class="form-closed">
 	<div class="form-wrap">
 		<div class="contact-form">
