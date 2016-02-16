@@ -5,6 +5,8 @@ global $color;
 global $feedback_active;
 global $how_it_works_active;
 global $freephone_num;
+$hw_box_active = get_field('hw_box_active', 'options');
+$hw_pages = get_field('hw_pages', 'options');
 
 if ($post->post_parent == 0) {
 $post_ID = $post->ID;
@@ -46,7 +48,20 @@ $children = get_pages($child_args);
 		<p class="text-center"><?php echo $client_name; ?>, <?php echo $location; ?></p>
 	</div>
 	<?php } ?>
-		
+	
+	<?php if ($hw_box_active && in_array(get_the_ID(), $hw_pages)) { 
+	$hw_logo = get_field('hw_logo', 'options');	
+	$hw_link = get_field('hw_link', 'options');
+	$hw_box_text = get_field('hw_box_text', 'options');
+	?>
+	<div class="sb-headway hidden-sm">
+		<a href="<?php echo $hw_link; ?>" rel="nofollow" target="_blank">
+		<figure class="hw-logo" style="background-image: url(<?php echo $hw_logo[url]; ?>)"></figure>
+		<p class="text-center"><?php echo $hw_box_text; ?></p>
+		</a>
+	</div>
+	<?php } ?>
+
 	<p class="tel-num tel-num-<?php echo (!empty($color)) ? $color : 'red'; ?> hidden-sm">Call us <span>free <a href="tel:<?php echo str_replace(' ', '', $freephone_num); ?>" onclick="ga('send', 'event','Freephone click', 'tap', '<?php echo $post->post_title; ?> - Call back')" title="Call us now"><?php echo $freephone_num; ?></a></span></p>
 		
 	<?php if ($how_it_works_active) { ?>	
