@@ -7,6 +7,20 @@
 				<?php wp_nav_menu(array( 'container_class' => 'social-links clearfix', 'theme_location' => 'social_links_menu', 'fallback_cb' => false ) ); ?>
 				
 				<?php 
+				$lexcel_active = get_field('lexcel_active', 'options');	
+				
+				if ($lexcel_active) { 
+				$lexcel_logo = get_field('lexcel_logo', 'options');	
+				$lexcel_url = get_field('lexcel_url', 'options');
+				?>
+				<div class="lexcel-logo" style="background-image: url(<?php echo $lexcel_logo; ?>);">
+					<a href="<?php echo $lexcel_url; ?>" target="_blank" rel="nofollow" title="Lexcel - Law Society Accredited">
+					Lexcel - Practice management Standard - Law Society Accredited	
+					</a>
+				</div>
+				<?php } ?>
+				
+				<?php 
 				$hw_box_active = get_field('hw_box_active', 'options');	
 				
 				if ($hw_box_active) { 
