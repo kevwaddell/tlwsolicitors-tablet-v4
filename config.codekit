@@ -139,13 +139,13 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/_\/css\/img\/law-awards-text-right.png": {
+	"\/_\/css\/img\/law-awards-text-right-2016.png": {
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"initialSize": 3940,
-		"inputAbbreviatedPath": "\/_\/css\/img\/law-awards-text-right.png",
-		"outputAbbreviatedPath": "\/_\/css\/img\/law-awards-text-right.png",
+		"inputAbbreviatedPath": "\/_\/css\/img\/law-awards-text-right-2016.png",
+		"outputAbbreviatedPath": "\/_\/css\/img\/law-awards-text-right-2016.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -1154,9 +1154,9 @@
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_\/css\/less\/styles.less",
-		"outputAbbreviatedPath": "\/_\/css\/css\/styles.css",
+		"outputAbbreviatedPath": "\/_\/css\/styles.css",
 		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
+		"outputPathIsSetByUser": 1,
 		"outputStyle": 0,
 		"relativeURLS": 0,
 		"shouldRunAutoprefixer": 0,
@@ -1256,7 +1256,7 @@
 		},
 	"\/_\/css\/styles.css": {
 		"fileType": 16,
-		"ignore": 0,
+		"ignore": 1,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_\/css\/styles.css",
 		"outputAbbreviatedPath": "No Output Path",
