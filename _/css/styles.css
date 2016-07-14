@@ -14389,6 +14389,7 @@ body.logged-in #xmas-popup-btn-wrap .holly.left {
   height: 100%;
 }
 #awards-pop-up #awards-pop-up-inner .inner-right {
+  float: right;
   background-image: url(img/law-awards-text-right-2016.png);
   background-position: left center;
   background-repeat: no-repeat;
@@ -14409,10 +14410,6 @@ body.logged-in #xmas-popup-btn-wrap .holly.left {
   float: left;
   padding-right: 10px;
   background-color: #FFFFFF;
-}
-#awards-pop-up #awards-pop-up-inner .inner-right {
-  float: right;
-  padding: 15px 20px 0px 20px;
 }
 #awards-pop-up #awards-pop-up-inner #nla-logo {
   float: right;
