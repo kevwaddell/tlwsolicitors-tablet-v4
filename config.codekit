@@ -139,6 +139,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/_\/css\/img\/law-awards-text-right.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 3940,
+		"inputAbbreviatedPath": "\/_\/css\/img\/law-awards-text-right.png",
+		"outputAbbreviatedPath": "\/_\/css\/img\/law-awards-text-right.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/_\/css\/img\/motopro-img-1.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
@@ -444,6 +455,26 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_\/css\/less\/animate.less",
 		"outputAbbreviatedPath": "\/_\/css\/css\/animate.css",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"relativeURLS": 0,
+		"shouldRunAutoprefixer": 0,
+		"shouldRunBless": 0,
+		"strictImports": 0,
+		"strictMath": 0,
+		"strictUnits": 0
+		},
+	"\/_\/css\/less\/awards-pop-up.less": {
+		"allowInsecureImports": 0,
+		"createSourceMap": 0,
+		"disableJavascript": 0,
+		"fileType": 1,
+		"ieCompatibility": 1,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/_\/css\/less\/awards-pop-up.less",
+		"outputAbbreviatedPath": "\/_\/css\/css\/awards-pop-up.css",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0,
@@ -2092,6 +2123,17 @@
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
+		},
+	"\/_\/js\/functions-min.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/_\/js\/functions-min.js",
+		"outputAbbreviatedPath": "\/_\/js\/min\/functions-min-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
 		},
 	"\/_\/js\/functions.js": {
 		"fileType": 64,
