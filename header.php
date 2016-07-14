@@ -37,7 +37,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 	<div id="awards-pop-up" class="open">
 		<div id="awards-pop-up-inner">
 			<div class="inner-left">
-				<div id="nla-logo" style="background-image: url(<?php echo $award_logo; ?>);"></div>
+				<div id="nla-logo"></div>
 			</div>
 			<div class="inner-right">
 				<div class="title in-block sr-only"><?php echo $award_title; ?></div><div class="year in-block sr-only"><?php echo $award_year; ?></div>
